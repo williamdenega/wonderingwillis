@@ -1,13 +1,17 @@
 import React from 'react'
 import {auth, provider} from '../firebase-config'
 import {signInWithPopup} from 'firebase/auth'
+import { useNavigate } from 'react-router-dom'
 
 export default function Login({ setIsAuth}) {
+
+  let navigate = useNavigate()
 
   const signIn = () =>{
     signInWithPopup(auth, provider).then((r)=>{
       localStorage.setItem("isAuth", true)
       setIsAuth(true)
+      navigate('/')
     })
   }
 
