@@ -10,9 +10,13 @@ export default function Login({ setIsAuth}) {
   const signIn = () =>{
     signInWithPopup(auth, provider).then((r)=>{
       localStorage.setItem("isAuth", true)
+      console.log('auth ' +auth)
+      console.log('provider ' + provider)
+      console.log(r)
+      console.log(r.user.uid)
       setIsAuth(true)
       navigate('/')
-    })
+    }).catch(error => window.alert('You are not admin boi!!!! '))
   }
 
 
@@ -20,7 +24,7 @@ export default function Login({ setIsAuth}) {
 
 
   return (
-    <div class='loginPage'>
+    <div className='loginPage'>
 
       <p>Sign in with Google to Post</p>
 
