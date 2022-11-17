@@ -4,7 +4,7 @@ import { db } from '../firebase-config'
 import { useNavigate } from 'react-router-dom'
 
 export default function CreatePost(){
- 
+
   const [title, setTitle] = useState('')
   const [post, setPost] = useState('')
 
@@ -12,6 +12,7 @@ export default function CreatePost(){
 
   let navigate = useNavigate()
   const createPost = async () => {
+    console.log(postsCollectionRef)
     await addDoc(postsCollectionRef, {title, post})
     navigate('/')
   }
