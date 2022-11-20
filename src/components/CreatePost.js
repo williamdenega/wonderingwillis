@@ -2,18 +2,25 @@ import React, { useState } from 'react'
 import { addDoc, collection } from 'firebase/firestore'
 import { db } from '../firebase-config'
 import { useNavigate } from 'react-router-dom'
+import moment from 'moment'
+import { Timestamp } from 'firebase/firestore'
+
 
 export default function CreatePost(){
 
   const [title, setTitle] = useState('')
   const [post, setPost] = useState('')
-
+  var date= moment().format('hh:mm:ss a MM-DD-YYYY');
+  
   const postsCollectionRef = collection(db,'posts')
 
   let navigate = useNavigate()
+
+
   const createPost = async () => {
+    let time = Timestamp.now()
     console.log(postsCollectionRef)
-    await addDoc(postsCollectionRef, {title, post})
+    await addDoc(postsCollectionRef, {title, post,time})
     navigate('/')
   }
 

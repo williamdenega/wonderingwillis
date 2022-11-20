@@ -16,11 +16,11 @@ export default function Login({ setIsAuth}) {
       // console.log('auth ' +auth)
       // console.log('provider ' + provider)
       // console.log(r)
-      // console.log(r.user.uid)
+      console.log(r.user.email)
       setIsAuth(true)
       console.log(userList)
       navigate('/')
-    }).catch(error => window.alert('You are not admin boi!!!! '))
+    }).catch(error => window.alert('You are not willis!! if you want admin access -> ask me '))
   }
 
 
