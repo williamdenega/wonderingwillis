@@ -1,23 +1,26 @@
 import React from 'react'
-import moment from 'moment'
+import './Post.css'
 
 
-export default function Post({data}) {
+export default function Post({data, num}) {
 
-  var date = moment().format('hh:mm:ss a MM-DD-YYYY');
+ 
 
   return (
-    <div className='post'>
+    <div className='postDiv'>
 
       <div className='postHeader'>
-          <h1>{data.title}</h1>
+          <h1>#{num} {data.title}</h1>
       </div> 
 
       <div className='postTextContainer'>
         {data.post}
       </div>
+      <div className='postInfo'>
+        {data.location ? <div>Location: {data.location} </div> : null }  
+        {data.date ? <div> Date: {data.date} </div>: null }
+      </div>
 
-    <p> {data.time}</p>
 
     </div>
     

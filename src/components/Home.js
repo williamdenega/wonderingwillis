@@ -20,11 +20,19 @@ export default function Home() {
 
 // postsCollectionRef
   console.log([postList])
+  const divStyle = {
+    width:'50%',
+    maxwidth:'660px',
+    overflow:'hidden',
+    background:'transparent' 
+  }
+
 
   return (
     <div className='homePage'>
-
-      {postList.map((info, count)=><Post key={count} data={info} />)}
+     
+      {/* <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameBorder="0" height="450" style={divStyle} sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/oh-but-god-single/1643141943" title="myFrame"></iframe> */}
+      {/* {postList.map((info, count)=><Post key={count} data={info}  num={count+1} />)} */}
 
     </div>)
 }

@@ -1,0 +1,143 @@
+.createPostPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F7F8FA;
+  }
+  
+  .cpContainer {
+    width: 600px;
+    height: auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sermon-form,
+  .mission-form {
+    display: none;
+  }
+  
+  .select-container {
+    margin-bottom: 20px;
+  }
+  
+  .sermon-select:hover, .mission-select:hover {
+    cursor: pointer;
+  }
+  
+  .sermon-select.active,
+  .mission-select.active {
+    background-color: #E5E5E5;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  .sermon-form.active,
+  .mission-form.active {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  .sermon-form label,
+  .mission-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .sermon-form input,
+  .mission-form input,
+  .sermon-form textarea,
+  .mission-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F7F8FA;
+    font-size: 16px;
+    color: #6B7280;
+  }
+  
+  .sermon-form textarea,
+  .mission-form textarea {
+    height: 100px;
+  }
+  
+  .sermon-form button,
+  .mission-form button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2F80ED;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .sermon-form button:hover,
+  .mission-form button:hover {
+    background-color: #dfbd10;
+  }
+  
+  
+  /* Styles for the SermonComponent form */
+  .sermon-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .sermon-form label {
+    margin-bottom: 10px;
+  }
+  
+  .sermon-form input,
+  .sermon-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Styles for the MissionComponent form */
+  .mission-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .mission-form label {
+    margin-bottom: 10px;
+  }
+  
+  .mission-form input,
+  .mission-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* creat post button */
+  
+  button {
+    background-color: #65878ece;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
